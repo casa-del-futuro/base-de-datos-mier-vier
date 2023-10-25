@@ -1,0 +1,46 @@
+# comentario de línea
+-- comentario de línea
+/*
+comentario
+multilínea
+*/
+
+/********** DDL ***********/
+# crear base de datos
+DROP DATABASE IF EXISTS casa_del_futuro;
+
+CREATE DATABASE casa_del_futuro;
+USE casa_del_futuro;
+
+# crear tabla
+CREATE TABLE usuario (
+	id INT PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(50),
+    fecha_de_nacimiento DATE
+);
+
+# añadir una columna
+ALTER TABLE usuario 
+ADD apellido VARCHAR(50) NOT NULL;
+
+# modificar una columna
+ALTER TABLE usuario 
+MODIFY apellido INT NOT NULL;
+
+# eliminar columna
+
+ALTER TABLE usuario
+DROP apellido;
+
+
+
+
+
+
+
+
+
+
+
+
+
