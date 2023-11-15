@@ -1,0 +1,25 @@
+# COUNT funcion que cuenta la cantidad de registros
+SELECT COUNT(*) AS cantidad_peliculas FROM movies;
+# AVG funcion que calcula el promedio de una columna
+SELECT ROUND( AVG(rating), 2 ) AS promedio_rating, COUNT(*) AS cantidad_peliculas  FROM movies
+WHERE awards > 5;
+# SUM funcion que calcula la sumatoria de una columna
+SELECT SUM(awards) AS total_premios FROM movies
+WHERE genre_id = 5;
+# MIN y MAX obtienen el valor minimo y maximo de una columna
+SELECT MIN(length) AS duracion_minima, MAX(length) AS duracion_maxima 
+FROM movies;
+# GROUP BY nos sirve para agrupar registros sobre una columna
+
+SELECT genre_id, 
+COUNT(*) cantidad_peliculas, 
+SUM(awards) total_premios, 
+AVG(length) promedio_duracion 
+FROM movies
+GROUP BY genre_id;
+
+
+
+
+
+
